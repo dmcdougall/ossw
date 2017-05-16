@@ -29,9 +29,9 @@ if isDir(gcc_prefix) then
 else LmodError("module reports "..gcc_prefix.." is not a directory! Module not loaded.")
 end
 
-local mpfr_prefix = "/Users/damon/ossw/libraries/mpfr/mpfr-3.1.2"
-local gmp_prefix = "/Users/damon/ossw/libraries/gmp/gmp-6.0.0"
-local mpc_prefix = "/Users/damon/ossw/libraries/mpc/mpc-1.0.2"
+local mpfr_prefix = "/Users/damon/ossw/libraries/mpfr/mpfr-"..mpfr_version
+local gmp_prefix = "/Users/damon/ossw/libraries/gmp/gmp-"..gmp_version
+local mpc_prefix = "/Users/damon/ossw/libraries/mpc/mpc-"..mpc_version
 
 prepend_path( "PATH", pathJoin(gcc_prefix, "bin" ) )
 prepend_path( "MANPATH", pathJoin(gcc_prefix, "share/man" ) )
