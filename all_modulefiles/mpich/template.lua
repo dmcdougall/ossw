@@ -28,7 +28,7 @@ if isDir(mpi_base) then
 else LmodError("module reports "..mpi_base.." is not a directory! Module not loaded.")
 end
 
-local mod_path = "/Users/damon/ossw/derived_modulefiles/"..compiler.."/"..compiler_version.."/mpich/"..version
+local mod_path = "/Users/damon/ossw/derived_modulefiles/"..compiler.."/"..compiler_version.."/mpich/"..version.."/modulefiles"
 
 prepend_path( "MODULEPATH", mod_path )
 
