@@ -33,7 +33,6 @@ MODULEDIR=derived_modulefiles/${COMPILER}/${COMPILER_VERSION}/modulefiles/gsl
 mkdir -p $MODULEDIR
 
 echo "local version = \"$GSL_VERSION\"" > $MODULEDIR/$GSL_VERSION.lua
-echo "local system_type = \"$SYSTEMTYPE\"" >> $MODULEDIR/$GSL_VERSION.lua
 echo "local modules_top_dir = \"$MODULES_TOP_DIR\"" >> $MODULEDIR/$GSL_VERSION.lua
 echo "local compiler = \"$COMPILER\"" >> $MODULEDIR/$GSL_VERSION.lua
 echo "local compiler_version = \"$COMPILER_VERSION\"" >> $MODULEDIR/$GSL_VERSION.lua
