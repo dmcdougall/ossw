@@ -3,12 +3,6 @@
 -- other mpi family is loaded already
 family("mpi")
 
-local hier = hierarchyA("mpich", 5)
---local compiler_version = hier[1]:sub(0,pathint2-1)
---local compiler = hier[2]:sub(pathint1+1,hier[2]:len())
-local compiler_version = hier[4]
-local compiler = hier[5]
-
 help(
 "MPICH MPI-3 Library\n"..
 "Adds MPICH "..version.." built with "..compiler.." "..compiler_version.." compilers to environment.\n"..
