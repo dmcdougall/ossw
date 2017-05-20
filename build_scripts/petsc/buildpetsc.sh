@@ -19,10 +19,6 @@ cd petsc-$PETSC_VERSION
 export PETSC_TYPE=cxx-opt
 export PETSC_ARCH=${COMPILER:?undefined}-${COMPILER_VERSION:?undefined}-${MPI_IMPLEMENTATION:?undefined}-${MPI_VERSION:?undefined}-$PETSC_TYPE
 
-#Can't use C-support... why??!!
-# For PETSc 3.2+
-#--with-clanguage=C++ --with-shared-libraries=1 \
-
 ./configure --with-debugging=false --COPTFLAGS='-O3' --CXXOPTFLAGS='-O3' --FOPTFLAGS='-O3' \
 --with-clanguage=C++ \
 --with-shared-libraries \
