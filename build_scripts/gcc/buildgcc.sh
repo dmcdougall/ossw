@@ -35,8 +35,9 @@ fi
 
 export GCC_MAJOR=`echo $GCC_VERSION | cut -d . -f 1`
 export GCC_MINOR=`echo $GCC_VERSION | cut -d . -f 2`
+export GCC_MICRO=`echo $GCC_VERSION | cut -d . -f 3`
 
-export GCC_INSTALL_VERSION=$GCC_MAJOR.$GCC_MINOR
+export GCC_INSTALL_VERSION=$GCC_MAJOR.$GCC_MINOR.$GCC_MICRO
 
 enablelangs=c,c++,fortran
 
@@ -56,10 +57,6 @@ export DYLD_LIBRARY_PATH=$MPC_DIR/lib:$MPFR_DIR/lib:$GMP_DIR/lib:$DYLD_LIBRARY_P
 
 tar xzvf $MODULES_TOP_DIR/sourcesdir/gcc/gcc-$GCC_VERSION.tar.gz
 cd gcc-$GCC_VERSION || exit 1
-
-# This patch is for 4.8.3 (at time of writing) and is a fix for gcc builds on
-# OS X Yosemite
-# cp $MODULES_TOP_DIR/build_scripts/gcc/gcc-$GCC_VERSION.patch .
 
 # Fixes build on El Capitan
 # https://trac.macports.org/ticket/48471://raw.githubusercontent.com/Homebrew/formula-patches/dcfc5a2e6/gcc48/define_non_standard_clang_macros.patch

@@ -5,11 +5,11 @@ echo "Building all GCC"
 
 mkdir -p ${MODULES_TOP_DIR:?undefined}/sourcesdir/gcc
 
-export gmp_version=6.1.0
-export mpfr_version=3.1.5
+export gmp_version=6.1.2
+export mpfr_version=3.1.6
 export mpc_version=1.0.3
 
-gcc_versions="6.3.0 7.1.0"
+gcc_versions="7.2.0"
 
 (cd $MODULES_TOP_DIR/sourcesdir/gcc
 if [ ! -f gmp-$gmp_version.tar.bz2 ]; then
