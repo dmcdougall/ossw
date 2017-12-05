@@ -7,7 +7,7 @@ echo
 
 mkdir -p ${MODULES_TOP_DIR:?undefined}/sourcesdir/gsl
 
-versions="1.16 2.0 2.3"
+versions="1.16 2.0 2.3 2.4"
 
 (cd ${MODULES_TOP_DIR:?undefined}/sourcesdir/gsl
 
