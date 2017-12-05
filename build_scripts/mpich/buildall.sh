@@ -7,7 +7,7 @@ echo
 
 mkdir -p ${MODULES_TOP_DIR:?undefined}/sourcesdir/mpich
 
-mpich_versions="3.0.4 3.2"
+mpich_versions="3.2.1"
 
 (cd ${MODULES_TOP_DIR:?undefined}/sourcesdir/mpich
 
