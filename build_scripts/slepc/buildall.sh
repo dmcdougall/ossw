@@ -7,7 +7,7 @@ echo "MPI implementation ${MPI_IMPLEMENTATION:?undefined} version ${MPI_VERSION:
 
 mkdir -p ${MODULES_TOP_DIR:?undefined}/sourcesdir/slepc
 
-slepc_versions="3.7.4"
+slepc_versions="3.8.2"
 
 (cd ${MODULES_TOP_DIR:?undefined}/sourcesdir/slepc
 
