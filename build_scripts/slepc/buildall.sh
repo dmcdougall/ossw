@@ -13,7 +13,7 @@ slepc_versions="3.7.4"
 
 for version in $slepc_versions; do
   if [ ! -f slepc-$version.tar.gz ]; then
-    wget http://slepc.upv.es/download/download.php?filename=slepc-$version.tar.gz -O slepc-$version.tar.gz
+    wget http://slepc.upv.es/download/distrib/slepc-$version.tar.gz -O slepc-$version.tar.gz
   fi
 done
 )

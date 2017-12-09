@@ -8,15 +8,13 @@ if [ ! -f ${MODULES_TOP_DIR:?undefined}/sourcesdir/slepc/slepc-$SLEPC_VERSION.ta
   exit
 fi
 
+TOPDIR=${MODULES_TOP_DIR:?undefined}/libraries/slepc
 export SLEPC_DIR=${MODULES_TOP_DIR:?undefined}/libraries/slepc/slepc-$SLEPC_VERSION
 
-if [ ! -d $SLEPC_DIR ] ; then
-  (mkdir -p $MODULES_TOP_DIR/libraries/slepc
-   cd $MODULES_TOP_DIR/libraries/slepc/
-   rm -rf slepc-$SLEPC_VERSION
-   tar xvzf ../../sourcesdir/slepc/slepc-$SLEPC_VERSION.tar.gz)
-fi
-cd $SLEPC_DIR
+mkdir -p $TOPDIR
+cd $TOPDIR
+tar xvzf $MODULES_TOP_DIR/sourcesdir/slepc/slepc-$SLEPC_VERSION.tar.gz
+cd slepc-$SLEPC_VERSION
 
 ./configure && \
 (make 2>&1 && touch build_cmd_success) | tee make.log
