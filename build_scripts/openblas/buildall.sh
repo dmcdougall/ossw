@@ -7,7 +7,7 @@ echo
 
 mkdir -p ${MODULES_TOP_DIR:?undefined}/sourcesdir/openblas
 
-openblas_versions="0.2.8 0.2.19"
+openblas_versions="0.2.8 0.2.19 0.2.20"
 
 (cd ${MODULES_TOP_DIR:?undefined}/sourcesdir/openblas
 
